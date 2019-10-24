@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>0d25a4da-9607-4429-9b0e-228e55fc8726</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bot.Builder.Community.Adapters.Alexa" Version="4.5.7" />
+    <PackageReference Include="Microsoft.Bot.Builder" Version="4.6.0-rc0" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.6.0-rc0" />  
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.6.0-rc0" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
