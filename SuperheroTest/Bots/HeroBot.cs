@@ -22,7 +22,7 @@ namespace SuperheroTest.Bots
         }
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            DialogSet dialogSet = new DialogSet(_conversationState.CreateProperty<DialogState>("StoryState"));
+            DialogSet dialogSet = new DialogSet(_conversationState.CreateProperty<DialogState>("HeroState"));
 
             dialogSet.Add(_dialog);
             DialogContext dialogContext =

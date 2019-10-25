@@ -38,9 +38,17 @@ namespace SuperheroTest
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
             services.AddTransient<IBot, HeroBot<HeroDialog>>();
-            
+
+            // Add Multiturn QnA Service
+            services.AddQnAService();
+
             // Add Alexa as a channel
             services.AddAlexa();
+
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
