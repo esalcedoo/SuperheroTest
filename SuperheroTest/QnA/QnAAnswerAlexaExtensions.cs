@@ -52,19 +52,21 @@ namespace SuperheroTest.QnA
                 displayListTemplate.ListItems = listItems;
             }
 
-            if (!string.IsNullOrEmpty(qnAAnswer.Answer.Image))
+            if (string.IsNullOrEmpty(qnAAnswer.Answer.Image))
             {
-                displayListTemplate.BackgroundImage = new Image()
-                {
-                    ContentDescription = "background",
-                    Sources = new ImageSource[]
+                qnAAnswer.Answer.Image = "https://esalcedoost.blob.core.windows.net/superhero/dc-comics-universe.jpg";
+            };
+
+            displayListTemplate.BackgroundImage = new Image()
+            {
+                ContentDescription = "background",
+                Sources = new ImageSource[]
                     {
                         new ImageSource()
                         {
                             Url = qnAAnswer.Answer.Image
                         }
                     }
-                };
             };
 
             return displayListTemplate;

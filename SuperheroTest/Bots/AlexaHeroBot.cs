@@ -31,7 +31,7 @@ namespace SuperheroTest.Bots
 
         protected override async Task OnMembersAddedAsync(DelegatingTurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            var messageActivity = MessageFactory.Text("¡¡¡NO HAY SIESTA .NET Conf BCN!!!");
+            var messageActivity = MessageFactory.Text("NO HAY SIESTA .NET Conf BCN!!! ¿Qué hacemos?");
             await turnContext.SendActivityAsync(messageActivity, cancellationToken);
         }
     }

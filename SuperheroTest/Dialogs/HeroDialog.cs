@@ -28,6 +28,7 @@ namespace SuperheroTest.Dialogs
             _qnaService = qnaService;
         }
 
+
         public async Task<DialogTurnResult> GetQnAAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken = default)
         {
             // Call QnA Maker and get results.
@@ -55,6 +56,5 @@ namespace SuperheroTest.Dialogs
             }
             return await stepContext.EndDialogAsync();
         }
-
     }
 }

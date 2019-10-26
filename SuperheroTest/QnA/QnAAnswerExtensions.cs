@@ -11,6 +11,7 @@ namespace SuperheroTest.QnA
         {
             IEnumerable<string> suggestedActions = qnAAnswer.Context?.Prompts?.Select(p => p.DisplayText);
             IMessageActivity activity;
+
             if (suggestedActions != null)
             {
                 activity = MessageFactory.SuggestedActions(suggestedActions, qnAAnswer.Answer.Text, qnAAnswer.Answer.SSML);
@@ -20,8 +21,14 @@ namespace SuperheroTest.QnA
                 activity = MessageFactory.Text(qnAAnswer.Answer.Text, qnAAnswer.Answer.SSML);
             }
 
-            activity.InputHint = InputHints.ExpectingInput;
+            activity.InputHint = qnAAnswer.IsFinal() ? InputHints.IgnoringInput : InputHints.ExpectingInput;
+
             return activity;
+        }
+
+        internal static bool IsFinal(this QnAAnswerModel qnAAnswer)
+        {
+            return !qnAAnswer.Answer.Image.Equals("https://esalcedoost.blob.core.windows.net/superhero/dc-comics-universe.jpg");
         }
     }
 }

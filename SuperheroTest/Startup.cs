@@ -34,7 +34,7 @@ namespace SuperheroTest
             services.AddSingleton<ConversationState>();
 
             // Create the HeroDialog, which is dependance from HeroBot
-            services.AddSingleton<HeroDialog>();
+            services.AddTransient<HeroDialog>();
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
             services.AddTransient<IBot, HeroBot<HeroDialog>>();
