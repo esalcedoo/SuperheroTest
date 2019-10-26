@@ -3,10 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UserSecretsId>0d25a4da-9607-4429-9b0e-228e55fc8726</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/3b8dce6d-ea1c-41d0-9bc0-16ae9ca8d895/resourcegroups/esalcedoodev/providers/microsoft.insights/components/SuperheroTest</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Bot.Builder.Community.Adapters.Alexa" Version="4.5.7" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.8.1" />
     <PackageReference Include="Microsoft.Bot.Builder" Version="4.6.0-rc0" />
     <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.6.0-rc0" />  
     <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.6.0-rc0" />  
@@ -19,5 +21,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+    <ItemGroup>
+      <WCFMetadata Include="Connected Services" />
+    </ItemGroup>
 
 </Project>
