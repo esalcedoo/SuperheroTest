@@ -1,7 +1,7 @@
 # SuperheroTest
-Superhero quiz under development
+Superhero quiz **under development**
 
-**This repo implements a Bot that resolve which superhero you are after three questions.**
+This repo implements a Bot that resolve which superhero you are after three questions.
 
 Alexa has been added as a channel.
 
