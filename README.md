@@ -6,7 +6,7 @@ This repo implements a Bot that resolve which superhero you are after three ques
 Alexa has been added as a channel.
 
 # Architecture
-![Arquitectura Bot: Dispositivos -> Canales -> BotService -> HeroBotApp -> QnA](https://esalcedoost.blob.core.windows.net/superhero/Arquitectura.PNG)
+![Arquitectura Bot: Dispositivos -> Canales -> BotService -> HeroBotApp -> QnA](https://esalcedoost.blob.core.windows.net/superhero/Arquitectura.PNG?)
 
 # See also
 - [QnA Maker](https://www.qnamaker.ai/)
